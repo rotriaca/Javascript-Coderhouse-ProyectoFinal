@@ -7,7 +7,7 @@ let result4Score = 0;
 let afterClick;
 
 //Almacenamiento de opciones en variables, q de question + a de answer habiendo 4 opciones por pregunta
-// pregunta 1
+/*/// pregunta 1
 let q1a1 = document.getElementById("q1a1");
 let q1a2 = document.getElementById("q1a2");
 let q1a3 = document.getElementById("q1a3");
@@ -31,8 +31,11 @@ let q4a4 = document.getElementById("q4a4");
 let q5a1 = document.getElementById("q5a1");
 let q5a2 = document.getElementById("q5a2");
 let q5a3 = document.getElementById("q5a3");
-let q5a4 = document.getElementById("q5a4");
-let result = document.getElementById("result");
+let q5a4 = document.getElementById("q5a4");*/
+
+$(".answer-choice");
+
+$(".result");
 
 
 // Almacenamiento de clicks en opciones
@@ -60,6 +63,20 @@ q5a1.addEventListener("click", result1);
 q5a2.addEventListener("click", result2);
 q5a3.addEventListener("click", result3);
 q5a4.addEventListener("click", result4);
+
+//Array de series
+
+const series = [
+  { id: 1, nombre: "Years and years", genero: "Drama", plataforma: "HBO" },
+  { id: 2, nombre: "Fleabag", genero: "Comedia", plataforma: "Amazon Prime"},
+  { id: 3, nombre: "Afterlife", genero: "Comedia dramática", plataforma: "Netflix"},
+  { id: 4, nombre: "Mare of Eastown", genero: "Policial", plataforma: "HBO" },
+  { id: 5, nombre: "The Boys", genero: "Acción", plataforma: "Amazon Prime"},
+  { id: 6, nombre: "Euphoria", genero: "Drama", plataforma: "Amazon Prime"},
+  { id: 7, nombre: "The Terror", genero: "Terror", plataforma: "Amazon Prime"},
+  { id: 8, nombre: "The Kingdom", genero: "Terror", plataforma: "Netflix" },
+  { id: 9, nombre: "Big Little Lies", genero: "Drama", plataforma: "HBO"}
+]
 
 
 //Contabilización de resultados hasta llegar al total de preguntas.
@@ -91,22 +108,22 @@ function result4() {
 // resultados posibles según las elecciones hechas
 function updateResult() {
   if (result1Score >= 3) {
-    result.innerHTML = "Years and years";
+    $("#result").append("Years and years");
   } else if (result2Score >3) {
-    result.innerHTML = "Fleabag";
+    $("#result").append("Fleabag");
   } else if (result3Score >3) {
-    result.innerHTML = "El Colapso";
+    $("#result").append("Mare of Eastown");
   } else if (result4Score > 3) {
-    result.innerHTML = "Mare of Eastown";
+    $("#result").append("The Boys");
   } else if (result1Score >=2) {
-    result.innerHTML = "The Boys";
+    $("#result").append("Euphoria");
   } else if (result2Score >= 2) {
-    result.innerHTML = "Euforia";
+    $("#result").append("The Terror");
   } else if (result3Score >= 2) {
-    result.innerHTML = "The Terror";
+    $("#result").append("The Kingdom");
   } else if (result4Score >= 2) {
-    result.innerHTML = "The Kingdom";
+    $("#result").append("Afterlife");
   } else {
-    result.innerHTML = "Big Little Lies";
+    $("#result").append("Big Little Lies");
   }
 }
