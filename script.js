@@ -67,16 +67,45 @@ q5a4.addEventListener("click", result4);
 //Array de series
 
 const series = [
-  { id: 1, nombre: "Years and years", genero: "Drama", plataforma: "HBO" },
+  { id: 1, nombre: "Years and years", genero: "Drama", plataforma: "HBO"},
   { id: 2, nombre: "Fleabag", genero: "Comedia", plataforma: "Amazon Prime"},
   { id: 3, nombre: "Afterlife", genero: "Comedia dramática", plataforma: "Netflix"},
   { id: 4, nombre: "Mare of Eastown", genero: "Policial", plataforma: "HBO" },
   { id: 5, nombre: "The Boys", genero: "Acción", plataforma: "Amazon Prime"},
-  { id: 6, nombre: "Euphoria", genero: "Drama", plataforma: "Amazon Prime"},
+  { id: 6, nombre: "Euphoria", genero: "Drama", plataforma: "HBO"},
   { id: 7, nombre: "The Terror", genero: "Terror", plataforma: "Amazon Prime"},
   { id: 8, nombre: "The Kingdom", genero: "Terror", plataforma: "Netflix" },
   { id: 9, nombre: "Big Little Lies", genero: "Drama", plataforma: "HBO"}
 ]
+
+const portadas = new Array(); 
+portadas[0] = new Image();
+portadas[0].src = 'img/Years-and-Years.jpeg';
+
+portadas[1] = new Image();
+portadas[1].src = 'img/fleabag.jpg';
+
+portadas[2] = new Image();
+portadas[2].src = 'img/afterlife.jpg';
+
+portadas[3] = new Image();
+portadas[3].src = 'img/mare-of-easttown.jpg';
+
+portadas[4] = new Image();
+portadas[4].src = 'img/the-boys.jpg';
+
+portadas[5] = new Image();
+portadas[5].src = 'img/euphoria.jpg';
+
+portadas[6] = new Image();
+portadas[6].src = 'img/the-terror.jpeg';
+
+portadas[7] = new Image();
+portadas[7].src = 'img/kingdom.png';
+
+portadas[8] = new Image();
+portadas[8].src = 'img/big-little-lies.jpg';
+
 
 
 //Contabilización de resultados hasta llegar al total de preguntas.
@@ -108,22 +137,22 @@ function result4() {
 // resultados posibles según las elecciones hechas
 function updateResult() {
   if (result1Score >= 3) {
-    $("#result").append("Years and years");
+    $("#result").append(series[0].nombre, "<br/>Género: ", series[0].genero, "<br/>Plataforma: ", series[0].plataforma,"<br/>", portadas[0]);
   } else if (result2Score >3) {
-    $("#result").append("Fleabag");
+    $("#result").append(series[1].nombre, "<br/>Género: ", series[1].genero, "<br/>Plataforma: ", series[1].plataforma,"<br/>", portadas[1]);
   } else if (result3Score >3) {
-    $("#result").append("Mare of Eastown");
+    $("#result").append(series[2].nombre, "<br/>Género: ", series[2].genero, "<br/>Plataforma: ", series[2].plataforma,"<br/>", portadas[2]);
   } else if (result4Score > 3) {
-    $("#result").append("The Boys");
+    $("#result").append(series[3].nombre, "<br/>Género: ", series[3].genero, "<br/>Plataforma: ", series[3].plataforma,"<br/>", portadas[3]);
   } else if (result1Score >=2) {
-    $("#result").append("Euphoria");
+    $("#result").append(series[4].nombre, "<br/>Género: ", series[4].genero, "<br/>Plataforma: ", series[4].plataforma,"<br/>", portadas[4]);
   } else if (result2Score >= 2) {
-    $("#result").append("The Terror");
+    $("#result").append(series[5].nombre, "<br/>Género: ", series[5].genero, "<br/>Plataforma: ", series[5].plataforma,"<br/>", portadas[5]);
   } else if (result3Score >= 2) {
-    $("#result").append("The Kingdom");
+    $("#result").append(series[6].nombre, "<br/>Género: ", series[6].genero, "<br/>Plataforma: ", series[6].plataforma,"<br/>", portadas[6]);
   } else if (result4Score >= 2) {
-    $("#result").append("Afterlife");
+    $("#result").append(series[7].nombre, "<br/>Género: ", series[7].genero, "<br/>Plataforma: ", series[7].plataforma,"<br/>", portadas[7]);
   } else {
-    $("#result").append("Big Little Lies");
+    $("#result").append(series[8].nombre, "<br/>Género: ", series[8].genero, "<br/>Plataforma: ", series[8].plataforma,"<br/>", portadas[8]);
   }
 }

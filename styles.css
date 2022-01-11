@@ -1,5 +1,3 @@
-/* CSS files add styling rules to your content */
-
 body {
     font-family: 'Cabin Sketch', cursive;
     margin: 2em;
@@ -194,4 +192,17 @@ body {
   .button5:focus {
     background-color: red;
     color: white;
+}
+
+  .reset{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    margin-left: 45%;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
